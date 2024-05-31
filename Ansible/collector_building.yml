@@ -1,6 +1,8 @@
 - name: Set up the machine as root
   hosts: c07
   remote_user: "{{ superuser }}"
+  become_user: root
+  become: yes
   tasks:
   - name: Initialize apt
     apt:
